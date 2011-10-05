@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+  <meta charset="utf-8">
+  <title>Requete AJAX</title>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    function requeteAjax(href) {
+      $.ajax({
+        type:"GET",
+        url:href,
+        success: function(retour){
+          $("#conteneur").html(retour);
+        }
+      });   
+    }
+  </script>
+</head>
+<body>
+  <h1>Requete AJAX</h1>
+  <a href="#" onclick="requeteAjax('requete_ajax.html')">requete</a>
+  <div id="conteneur" style="border:2px solid red; width:300px; height:300px;">
+  
+  </div>
+</body>
+</html>
